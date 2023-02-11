@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour de DOM</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <style>
+         .fruits-container li{
+            color: orange;
+         }
+         #fruits-title{
+            color: black;
+         }
+         .important-place{
+            color: blueviolet;
+         }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to my DOM</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi ipsam, repellendus quisquam quae officiis itaque blanditiis nam eius totam repudiandae autem necessitatibus possimus consectetur labore mollitia reiciendis. Nostrum, vero voluptas?</p>
+    </header>
+    <main id="main-container">
+        <section>
+            <h1>Awesome DOM And Now List</h1>
+        <ul>
+            <li>Jalali Set</li>
+            <li>Mushfiq</li>
+            <li>Bonobash</li>
+        </ul>
+        </section>
+
+        <section class="fruits-container">
+            <h1 id="fruits-title">Fruits I like</h1>
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Watermelon</li>
+        </ul>
+        </section>
+
+        <section id="place-container" class="text-big">
+            <h1 id="Place-title">Places I like to visit</h1>
+            <ul id="place-list">
+                <li class="important-place">Katabon</li>
+                <li class="important-place">Bandarban</li>
+                <li class="important-place">Sundarban</li>
+                <li>Sajek</li>
+            </ul>
+        </section>
+
+        <script src="js/dom.js"></script>
+        <script src="js/append.js"></script>
+        <script src="js/styleInJs.js"></script>
+        <script>
+            const student = {
+                name: "Abul",
+                ID: 001,
+                study: function(time){
+                    // console.log(time, 'Study kortese');
+                }
+            }
+            const liCollection = document.getElementsByTagName('li');
+
+            for (const li of liCollection) {
+                // console.log(li.innerText)
+            }
+
+            const fruitTitle =document.getElementById('fruits-title');
+            fruitTitle.innerText = 'Fruits Changed By JS';
+            const places = document.getElementsByClassName('important-place')
+            for(const place of places){
+                // console.log(place.innerText)
+            }
+
+
+            // Query Selector
+            const someLi = document.querySelectorAll('.fruits-container li');
+            // console.log(someLi); 
+            for(const li of someLi){
+                // console.log(li.innerText)
+            }
+        </script>
+    </main>
+
+</body>
+
+</html>

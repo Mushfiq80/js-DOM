@@ -1,0 +1,16 @@
+h1{
+    color: saddlebrown ;
+}
+
+ul{
+    color: navy;
+    font: bold;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-big{
+    font-size: 2em;
+}
